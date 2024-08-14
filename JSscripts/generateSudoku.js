@@ -1,8 +1,4 @@
-/* ----------------------------------------------- *
- * Based on: https://github.com/robatron/sudoku.js *
- * ----------------------------------------------- */
 
-// Define difficulties by how many filled squares (cells) are given to the player in a new puzzle
 var DIFFICULTY = {
     "easy": 62,
     "medium": 53,
@@ -13,23 +9,7 @@ var DIFFICULTY = {
 };
 
 function generateSudoku(difficulty) {
-    /*
-     * Generate a new Sudoku puzzle of a particular 'difficulty',
-     * e.g., generateSudoku("easy");
-     *
-     * Difficulties are as follows, and represent the number of given squares:
-     * "easy": 62, "medium": 53, "hard": 44, "very-hard": 35, "insane": 26, "inhuman": 17
-     *
-     * You may also enter a custom number of squares to be given,
-     * e.g., generateSudoku(60)
-     *
-     * 'difficulty' must be a number between 17 and 81 inclusive.
-     * If it's outside of that range, 'difficulty' will be set to the closest bound,
-     * e.g., 0 - > 17, and 100 - > 81.
-     */
-
-    // If 'difficulty' is a string or undefined, convert it to a number or
-    // default it to "easy" if undefined.
+   
     if (typeof difficulty === "string" || typeof difficulty === "undefined") {
         difficulty = DIFFICULTY[difficulty] || DIFFICULTY.easy;
     }
